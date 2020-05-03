@@ -1,0 +1,30 @@
+// Note: This uses the light values in the provided source code.
+constants shiny_purple 0.3 0.2 0.8 0.3 0 0 0.3 0.2 0.8
+constants shiny_teal 0.3 0.0 0.0 0.3 0.2 0.8 0.3 0.2 0.8
+constants dull_yellow 0.3 0.8 0.2 0.3 0.8 0.2 0 0 0
+constants bluish 0.2 0.4 0.2 0.3 0.3 0.6 0.4 0.9 0.4
+constants greenish 0.2 0.2 0.4 0.3 0.6 0.3 0.4 0.4 0.9
+constants blackish 0.1 0.1 0.8 0.1 0.1 0.8 0.1 0.1 0.8
+push
+move 250 250 0
+rotate y 25
+rotate x 65
+box bluish -40 40 40 80 80 80
+torus bluish -43 0 0 5 10
+torus shiny_teal 0 40 0 5 20
+push
+move 0 40 -40
+sphere -20 5 -5 10
+sphere 20 5 -5 10
+sphere blackish 20 10 0 5
+sphere blackish -20 10 0 5
+pop
+push
+move 0 -40 40
+rotate x -130
+push
+move 0 -40 -40
+box greenish -40 40 40 80 80 80
+torus greenish -43 0 0 5 10
+display
+save script.png
